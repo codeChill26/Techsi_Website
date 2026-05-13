@@ -21,8 +21,8 @@ export default function Header() {
 
   const isLanding = pathname === '/'
   const activeSection = isLanding ? normalizedHash : ''
-  const isProductsActive = activeSection === '#products'
-  const isServicesActive = activeSection === '#services'
+  const isProductsActive = pathname === '/products' || activeSection === '#products'
+  const isServicesActive = pathname === '/services' || activeSection === '#services'
   const isHomeActive = isLanding && !(isProductsActive || isServicesActive)
 
   const closeMenu = () => setIsMenuOpen(false)
@@ -68,22 +68,22 @@ export default function Header() {
           >
             About
           </Link>
-          <a
-            href="/#products"
+          <Link
+            to="/products"
             data-active={isProductsActive ? 'true' : undefined}
             aria-current={isProductsActive ? 'page' : undefined}
             onClick={closeMenu}
           >
             Products
-          </a>
-          <a
-            href="/#services"
+          </Link>
+          <Link
+            to="/services"
             data-active={isServicesActive ? 'true' : undefined}
             aria-current={isServicesActive ? 'page' : undefined}
             onClick={closeMenu}
           >
             Services
-          </a>
+          </Link>
           <Link
             to="/contact"
             data-active={pathname === '/contact' ? 'true' : undefined}

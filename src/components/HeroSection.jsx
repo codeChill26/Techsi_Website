@@ -1,7 +1,10 @@
 import heroBg from '../assets/Hero_background.png'
 import wave1 from '../assets/Wave_1.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function HeroSection() {
+    const navigate = useNavigate()
+
     return (
         <section
             className="lp-hero lp-hero--bg"
@@ -37,10 +40,18 @@ export default function HeroSection() {
                     </p>
 
                     <div className="lp-hero__buttons">
-                        <button className="lp-btn" type="button">
+                        <button
+                            className="lp-btn"
+                            type="button"
+                            onClick={() => navigate('/products')}
+                        >
                             Explore Products<span className="lp-btn__arrow" aria-hidden />
                         </button>
-                        <button className="lp-btn" type="button">
+                        <button
+                            className="lp-btn"
+                            type="button"
+                            onClick={() => navigate('/contact')}
+                        >
                             Request a Quote
                         </button>
                     </div>

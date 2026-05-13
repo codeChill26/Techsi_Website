@@ -1,5 +1,6 @@
 import logo from '../assets/Logo.png'
 import { Link } from 'react-router-dom'
+import { Mail, MapPin, Phone } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -18,12 +19,25 @@ export default function Footer() {
                     manufacturers with engineering teams across Asia-Pacific.
                   </em>
                 </div>
-                <div className="lp-footer__text lp-footer__contact">
-                  42, West Coast Place, Singapore 127594
-                  <br />
-                  +65 69521642
-                  <br />
-                  Francis@techsipl.com
+                <div className="lp-footer__contactList" aria-label="Contact information">
+                  <div className="lp-footer__contactItem">
+                    <MapPin className="lp-footer__contactIcon" aria-hidden="true" />
+                    <span className="lp-footer__contactText">
+                      42, West Coast Place, Singapore 127594
+                    </span>
+                  </div>
+                  <div className="lp-footer__contactItem">
+                    <Phone className="lp-footer__contactIcon" aria-hidden="true" />
+                    <a className="lp-footer__contactText" href="tel:+6569521642">
+                      +65 69521642
+                    </a>
+                  </div>
+                  <div className="lp-footer__contactItem">
+                    <Mail className="lp-footer__contactIcon" aria-hidden="true" />
+                    <a className="lp-footer__contactText" href="mailto:Francis@techsipl.com">
+                      Francis@techsipl.com
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -31,8 +45,8 @@ export default function Footer() {
 
           <div className="lp-footer__links" aria-label="Footer navigation">
             <Link to="/about">About Us</Link>
-            <a href="/#products">Products</a>
-            <a href="/#services">Services</a>
+            <Link to="/products">Products</Link>
+            <Link to="/services">Services</Link>
             <Link to="/contact">Contact</Link>
           </div>
 
