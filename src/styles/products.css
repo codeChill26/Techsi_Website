@@ -1,0 +1,137 @@
+.pr-hero {
+  background: var(--c-navy);
+  color: var(--white);
+  padding: 70px 0 56px;
+}
+
+.pr-hero__kicker {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  opacity: 0.9;
+  margin: 0 0 14px;
+}
+
+.pr-hero__title {
+  font-size: 64px;
+  line-height: 1.05;
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+
+.pr-hero__desc {
+  margin: 0;
+  max-width: 760px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.pr-categories {
+  padding: 44px 0 18px;
+}
+
+.pr-categories__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.pr-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(13, 47, 66, 0.12);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+}
+
+.pr-card__iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(13, 47, 66, 0.06);
+  border: 1px solid rgba(13, 47, 66, 0.08);
+  margin-bottom: 12px;
+}
+
+.pr-card__icon {
+  width: 22px;
+  height: 22px;
+  color: var(--c-navy);
+}
+
+.pr-card__title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(13, 47, 66, 0.92);
+}
+
+.pr-card__desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(13, 47, 66, 0.7);
+}
+
+.pr-bom {
+  padding: 34px 0 64px;
+}
+
+.pr-bom__card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(13, 47, 66, 0.12);
+  border-radius: var(--radius);
+  padding: 54px 22px;
+  text-align: center;
+}
+
+.pr-bom__title {
+  margin: 0 0 10px;
+  font-size: 44px;
+  line-height: 1.05;
+  font-weight: 700;
+  color: rgba(13, 47, 66, 0.95);
+}
+
+.pr-bom__desc {
+  margin: 0 auto 18px;
+  max-width: 680px;
+  color: rgba(13, 47, 66, 0.7);
+  line-height: 1.45;
+}
+
+.pr-bom__btn {
+  padding: 14px 22px;
+  font-size: 16px;
+}
+
+@media (max-width: 960px) {
+  .pr-hero {
+    padding: 56px 0 42px;
+  }
+
+  .pr-hero__title {
+    font-size: clamp(34px, 7vw, 46px);
+  }
+
+  .pr-categories__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pr-bom__card {
+    padding: 34px 16px;
+    text-align: left;
+  }
+
+  .pr-bom__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 520px) {
+  .pr-categories__grid {
+    grid-template-columns: 1fr;
+  }
+}

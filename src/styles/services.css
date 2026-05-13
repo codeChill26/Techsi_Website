@@ -1,0 +1,133 @@
+.sv-hero {
+  background: var(--c-navy);
+  color: var(--white);
+  padding: 70px 0 56px;
+}
+
+.sv-hero__kicker {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  opacity: 0.9;
+  margin: 0 0 14px;
+}
+
+.sv-hero__title {
+  font-size: 64px;
+  line-height: 1.05;
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+
+.sv-hero__desc {
+  margin: 0;
+  max-width: 860px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.sv-cards {
+  padding: 44px 0 12px;
+}
+
+.sv-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.sv-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(13, 47, 66, 0.12);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+}
+
+.sv-card__iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(13, 47, 66, 0.06);
+  border: 1px solid rgba(13, 47, 66, 0.08);
+  margin-bottom: 12px;
+}
+
+.sv-card__icon {
+  width: 22px;
+  height: 22px;
+  color: var(--c-navy);
+}
+
+.sv-card__title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(13, 47, 66, 0.92);
+}
+
+.sv-card__desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(13, 47, 66, 0.7);
+}
+
+.sv-cta {
+  padding: 26px 0 70px;
+}
+
+.sv-cta__panel {
+  background: linear-gradient(180deg, var(--c-navy), #1d7097);
+  color: var(--white);
+  border-radius: calc(var(--radius) * 2);
+  padding: 56px 22px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sv-cta__title {
+  margin: 0 0 10px;
+  font-size: 52px;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.sv-cta__desc {
+  margin: 0 auto 18px;
+  max-width: 780px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.45;
+}
+
+.sv-cta__btn {
+  background: var(--white);
+  color: var(--c-navy);
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow: none;
+}
+
+@media (max-width: 960px) {
+  .sv-hero {
+    padding: 56px 0 42px;
+  }
+
+  .sv-hero__title {
+    font-size: clamp(34px, 7vw, 46px);
+  }
+
+  .sv-cards__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sv-cta__panel {
+    padding: 34px 16px;
+    text-align: left;
+  }
+
+  .sv-cta__title {
+    font-size: 32px;
+  }
+}
