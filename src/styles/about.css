@@ -210,4 +210,24 @@
   .ab-adv {
     padding: 64px 0 78px;
   }
+
+  .ab-adv__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ab-hero__title {
+    font-size: 34px;
+  }
+
+  .ab-intro {
+    padding: 48px 0;
+  }
+
+  .ab-cards {
+    padding: 48px 0 56px;
+  }
 }

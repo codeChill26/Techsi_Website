@@ -17,18 +17,12 @@ export default function HeroSection() {
                         <br />
                         Wholesaler
                     </div>
-
-                    <div className="lp-hero__buttons">
-                        <button className="lp-btn" type="button">
-                            Explore Products<span className="lp-btn__arrow" aria-hidden />
-                        </button>
-                        <button className="lp-btn" type="button">
-                            Request a Quote
-                        </button>
-                    </div>
                 </div>
 
                 <div className="lp-hero__right">
+                    <div className="lp-hero__figure" aria-hidden="true">
+                        <img className="lp-hero__figureImg" src={wave1} alt="" />
+                    </div>
                     <h1 className="lp-hero__title">
                         Powering
                         <br />
@@ -41,6 +35,15 @@ export default function HeroSection() {
                         operates online service marketplaces — connecting global
                         manufacturers with engineering teams across the region.
                     </p>
+
+                    <div className="lp-hero__buttons">
+                        <button className="lp-btn" type="button">
+                            Explore Products<span className="lp-btn__arrow" aria-hidden />
+                        </button>
+                        <button className="lp-btn" type="button">
+                            Request a Quote
+                        </button>
+                    </div>
                 </div>
             </div>
 

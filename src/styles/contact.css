@@ -226,3 +226,21 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .ct-hero {
+    padding: 58px 0 66px;
+  }
+
+  .ct-hero__title {
+    font-size: 38px;
+  }
+
+  .ct-formCard {
+    padding: 20px 18px 22px;
+  }
+
+  .ct-map__frame iframe {
+    height: 200px;
+  }
+}

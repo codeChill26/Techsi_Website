@@ -1,10 +1,12 @@
 import logo from '../assets/Logo.png'
-import { useSyncExternalStore } from 'react'
+import { useState, useSyncExternalStore } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
   const location = useLocation()
   const pathname = location.pathname
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const hash = useSyncExternalStore(
     (onStoreChange) => {
@@ -23,6 +25,8 @@ export default function Header() {
   const isServicesActive = activeSection === '#services'
   const isHomeActive = isLanding && !(isProductsActive || isServicesActive)
 
+  const closeMenu = () => setIsMenuOpen(false)
+
   return (
     <header className="lp-header">
       <div className="container lp-header__inner">
@@ -31,11 +35,28 @@ export default function Header() {
           <span>TECHSI</span>
         </Link>
 
-        <nav className="lp-nav" aria-label="Primary">
+        <button
+          className="lp-navToggle"
+          type="button"
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-controls="lp-primary-nav"
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+        >
+          <span aria-hidden="true">{isMenuOpen ? '✕' : '☰'}</span>
+        </button>
+
+        <nav
+          id="lp-primary-nav"
+          className="lp-nav"
+          aria-label="Primary"
+          data-open={isMenuOpen ? 'true' : 'false'}
+        >
           <Link
             to="/"
             data-active={isHomeActive ? 'true' : undefined}
             aria-current={isHomeActive ? 'page' : undefined}
+            onClick={closeMenu}
           >
             Home
           </Link>
@@ -43,6 +64,7 @@ export default function Header() {
             to="/about"
             data-active={pathname === '/about' ? 'true' : undefined}
             aria-current={pathname === '/about' ? 'page' : undefined}
+            onClick={closeMenu}
           >
             About
           </Link>
@@ -50,6 +72,7 @@ export default function Header() {
             href="/#products"
             data-active={isProductsActive ? 'true' : undefined}
             aria-current={isProductsActive ? 'page' : undefined}
+            onClick={closeMenu}
           >
             Products
           </a>
@@ -57,6 +80,7 @@ export default function Header() {
             href="/#services"
             data-active={isServicesActive ? 'true' : undefined}
             aria-current={isServicesActive ? 'page' : undefined}
+            onClick={closeMenu}
           >
             Services
           </a>
@@ -64,6 +88,7 @@ export default function Header() {
             to="/contact"
             data-active={pathname === '/contact' ? 'true' : undefined}
             aria-current={pathname === '/contact' ? 'page' : undefined}
+            onClick={closeMenu}
           >
             Contact
           </Link>

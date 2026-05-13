@@ -50,6 +50,19 @@
   color: rgba(13, 47, 66, 0.85);
 }
 
+.lp-navToggle {
+  display: none;
+  appearance: none;
+  border: 1px solid rgba(13, 47, 66, 0.18);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--c-navy);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .lp-nav a {
   text-decoration: none;
   padding: 8px 0;
@@ -116,6 +129,22 @@
   align-self: center;
 
   padding-left: 30px;
+}
+
+.lp-hero__figure {
+  display: none;
+  pointer-events: none;
+}
+
+.lp-hero__figureImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.lp-section-wave--cta .lp-section-wave__img {
+  opacity: 0.38;
+  filter: blur(1px);
 }
 
 .lp-hero__kicker {
@@ -675,6 +704,63 @@
 }
 
 @media (max-width: 960px) {
+  .lp-section-wave--hero {
+    display: none;
+  }
+
+  .lp .container {
+    width: min(var(--container), calc(100% - 32px));
+  }
+
+  .lp-header__inner {
+    height: auto;
+    padding: 14px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .lp-header__spacer {
+    display: none;
+  }
+
+  .lp-header__logo {
+    font-size: 22px;
+  }
+
+  .lp-header__logo img {
+    height: 44px;
+  }
+
+  .lp-nav {
+    width: 100%;
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    font-size: 16px;
+    padding: 12px 14px;
+    border: 1px solid rgba(13, 47, 66, 0.12);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.82);
+  }
+
+  .lp-nav[data-open='true'] {
+    display: grid;
+  }
+
+  .lp-navToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lp-nav a {
+    padding: 10px 6px;
+  }
+
+  .lp-nav a[data-active='true']::after {
+    bottom: 6px;
+  }
+
   .lp-section-wave--hero,
   .lp-section-wave--cta {
     left: 0;
@@ -691,16 +777,19 @@
   }
 
   .lp-hero__title {
-    font-size: 46px;
+    font-size: clamp(34px, 9vw, 46px);
+    margin: 0 0 12px;
   }
 
   .lp-hero__kicker {
     font-size: 24px;
     transform: none;
+    width: auto;
   }
 
   .lp-hero__grid {
     min-height: auto;
+    gap: 10px;
   }
 
   .lp-hero__left {
@@ -713,9 +802,58 @@
 
     margin-left: 0;
 
-    padding-left: 6px;
+    padding-left: 0;
 
-    padding-top: 30px; /* thêm */
+    padding-top: 10px;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .lp-hero__right {
+    padding-left: 0;
+  }
+
+  .lp-hero__figure {
+    display: block;
+    margin: 0 0 -128px;
+    max-height: 180px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  .lp-hero__figureImg {
+    opacity: 0.26;
+    filter: blur(2px) saturate(1.05);
+    height: 100%;
+    object-fit: cover;
+    transform: translateY(-18px) scale(1.04);
+  }
+
+  .lp-hero__buttons {
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 10px;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+
+  .lp-hero__title,
+  .lp-hero__desc {
+    position: relative;
+    z-index: 2;
+  }
+
+  .lp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lp-what__left {
+    margin-left: 0;
+    padding-top: 34px;
+    padding-bottom: 34px;
   }
 
   .lp-inventory__left .container {
@@ -771,6 +909,67 @@
 
   .lp-footer__grid {
     grid-template-columns: 1fr;
+  }
+
+  .lp-cta {
+    padding: 56px 0 64px;
+  }
+
+  .lp-cta__spacer {
+    display: none;
+  }
+
+  .lp-cta__link {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lp-hero {
+    padding: 48px 0 40px;
+  }
+
+  .lp-hero__figure {
+    max-height: 160px;
+    margin-bottom: -118px;
+  }
+
+  .lp-hero__title {
+    font-size: 40px;
+  }
+
+  .lp-what__title,
+  .lp-inventory__title,
+  .lp-inventory__from,
+  .lp-cta__title {
+    font-size: 40px;
+  }
+
+  .lp-cta__link {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .lp-hero__figure {
+    max-height: 140px;
+    margin-bottom: -108px;
+  }
+
+  .lp-hero__title {
+    font-size: 34px;
+  }
+
+  .lp-what__title,
+  .lp-inventory__title,
+  .lp-inventory__from,
+  .lp-cta__title {
+    font-size: 34px;
   }
 }
 
