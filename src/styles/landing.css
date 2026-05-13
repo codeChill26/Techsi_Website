@@ -732,6 +732,11 @@
 }
 
 @media (max-width: 960px) {
+  .lp-section-wave--cta .lp-section-wave__img {
+    opacity: 0.38;
+    filter: blur(1px);
+  }
+
   .lp-section-wave--hero {
     display: none;
   }
