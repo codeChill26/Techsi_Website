@@ -1,0 +1,228 @@
+.ct-hero {
+  background: linear-gradient(90deg, rgba(13, 47, 66, 1) 0%, rgba(11, 88, 130, 1) 100%);
+  color: var(--white);
+  padding: 74px 0 92px;
+}
+
+.ct-hero__kicker {
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.75;
+  margin: 0 0 14px;
+}
+
+.ct-hero__title {
+  margin: 0 0 12px;
+  font-size: 54px;
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.ct-hero__desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ct-body {
+  background: var(--white);
+  padding: 58px 0 90px;
+}
+
+.ct-body__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.35fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.ct-info {
+  display: grid;
+  gap: 18px;
+}
+
+.ct-infoCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid rgba(13, 47, 66, 0.12);
+  border-radius: 14px;
+  padding: 16px 18px;
+  background: var(--white);
+  box-shadow: 0 12px 30px rgba(13, 47, 66, 0.06);
+}
+
+.ct-infoCard__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(13, 47, 66, 0.92);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.ct-infoCard__icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.ct-infoCard__label {
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  color: rgba(13, 47, 66, 0.45);
+  margin-bottom: 4px;
+}
+
+.ct-infoCard__value {
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: rgba(13, 47, 66, 0.9);
+}
+
+.ct-map {
+  margin-top: 4px;
+}
+
+.ct-map__frame {
+  border: 1px solid rgba(13, 47, 66, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(13, 47, 66, 0.06);
+  box-shadow: 0 12px 30px rgba(13, 47, 66, 0.06);
+}
+
+.ct-map__frame iframe {
+  display: block;
+  width: 100%;
+  height: 240px;
+  border: 0;
+}
+
+.ct-map__link {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid rgba(13, 47, 66, 0.12);
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(13, 47, 66, 0.85);
+}
+
+.ct-formCard {
+  border: 1px solid rgba(13, 47, 66, 0.12);
+  border-radius: 16px;
+  padding: 26px 26px 28px;
+  background: var(--white);
+  box-shadow: 0 18px 46px rgba(13, 47, 66, 0.08);
+}
+
+.ct-formCard__title {
+  margin: 0 0 18px;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 900;
+  color: rgba(13, 47, 66, 0.92);
+}
+
+.ct-form {
+  display: grid;
+  gap: 16px;
+}
+
+.ct-form__row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.ct-field {
+  display: grid;
+  gap: 8px;
+}
+
+.ct-field__label {
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(13, 47, 66, 0.85);
+}
+
+.ct-field input,
+.ct-field textarea {
+  width: 100%;
+  border: 1px solid rgba(13, 47, 66, 0.14);
+  border-radius: 10px;
+  padding: 12px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.ct-field textarea {
+  resize: vertical;
+}
+
+.ct-form__consent {
+  margin: 6px 0 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: rgba(13, 47, 66, 0.55);
+}
+
+.ct-form__alert {
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.ct-form__alert--error {
+  background: rgba(220, 45, 45, 0.08);
+  border: 1px solid rgba(220, 45, 45, 0.18);
+  color: rgba(120, 16, 16, 0.92);
+}
+
+.ct-form__alert--success {
+  background: rgba(16, 160, 90, 0.1);
+  border: 1px solid rgba(16, 160, 90, 0.18);
+  color: rgba(13, 90, 50, 0.95);
+}
+
+.ct-form__submit {
+  justify-self: start;
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--white);
+  background: #1d7097;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.ct-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 960px) {
+  .ct-body__grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .ct-form__row2 {
+    grid-template-columns: 1fr;
+  }
+}
