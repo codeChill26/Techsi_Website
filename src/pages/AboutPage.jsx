@@ -23,8 +23,7 @@ export default function AboutPage() {
             </h1>
             <p className="ab-hero__desc">
               TECHSI PTE LTD is a registered Singapore company operating at the
-              intersection of electronic component wholesale and online service
-              marketplaces.
+              intersection of electronic and telecommunication component wholesale.
             </p>
           </div>
         </section>

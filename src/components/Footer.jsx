@@ -14,8 +14,7 @@ export default function Footer() {
                 <div className="lp-footer__company">TECHSI PTE LTD</div>
                 <div className="lp-footer__text">
                   <em>
-                    A Singapore-based wholesaler of electronic components and
-                    operator of online service marketplaces, connecting global
+                    A Singapore-based wholesaler of electronic and telecommunication components connecting global
                     manufacturers with engineering teams across Asia-Pacific.
                   </em>
                 </div>

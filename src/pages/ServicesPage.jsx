@@ -14,11 +14,11 @@ import '../styles/landing.css'
 import '../styles/services.css'
 
 const services = [
-  {
-    Icon: Globe,
-    title: 'Online Service Marketplaces',
-    desc: 'Curated digital platforms connecting buyers with verified service providers across the region.',
-  },
+  // {
+  //   Icon: Globe,
+  //   title: 'Online Service Marketplaces',
+  //   desc: 'Curated digital platforms connecting buyers with verified service providers across the region.',
+  // },
   {
     Icon: ShoppingBag,
     title: 'Managed Procurement',
@@ -59,11 +59,11 @@ export default function ServicesPage() {
             <h1 className="sv-hero__title">
               Marketplaces and procurement, made simple
             </h1>
-            <p className="sv-hero__desc">
+            {/* <p className="sv-hero__desc">
               Beyond components, TECHSI operates online marketplaces that connect
               buyers with vetted service providers — and offers managed
               procurement to lighten the load on your engineering team.
-            </p>
+            </p> */}
           </div>
         </section>
 

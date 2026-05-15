@@ -263,7 +263,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="ct-infoCard__label">EMAIL</div>
-                  <div className="ct-infoCard__value">contact@techsi.sg</div>
+                  <div className="ct-infoCard__value">Francis@techsipl.com</div>
                 </div>
               </div>
 

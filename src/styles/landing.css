@@ -441,9 +441,35 @@
 
 .lp-services__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* 6-column grid so the second row can be staggered between the first row */
+  grid-template-columns: repeat(6, 1fr);
   gap: 34px 42px;
   align-items: start;
+}
+
+@media (min-width: 961px) {
+  /* Stagger 5 cards on desktop: 3 on top row, 2 on bottom row in-between gaps */
+  .lp-services__grid > .lp-card:nth-child(1) {
+    grid-column: 1 / span 2;
+  }
+
+  .lp-services__grid > .lp-card:nth-child(2) {
+    grid-column: 3 / span 2;
+  }
+
+  .lp-services__grid > .lp-card:nth-child(3) {
+    grid-column: 5 / span 2;
+  }
+
+  .lp-services__grid > .lp-card:nth-child(4) {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+  }
+
+  .lp-services__grid > .lp-card:nth-child(5) {
+    grid-column: 4 / span 2;
+    grid-row: 2;
+  }
 }
 
 .lp-card {
@@ -923,6 +949,11 @@
   .lp-services__grid {
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  .lp-services__grid > .lp-card {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .lp-inventory-list__grid {

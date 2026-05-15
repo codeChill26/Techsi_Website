@@ -11,11 +11,11 @@ const items = [
     title: 'Component Wholesale',
     desc: 'ICs, semiconductors, passives, connectors, modules — sourced from authorised global brands.',
   },
-  {
-    icon: iMarketplace,
-    title: 'Online Marketplaces',
-    desc: 'Digital platforms that connect OEMs and buyers with vetted service providers across the region.',
-  },
+  // {
+  //   icon: iMarketplace,
+  //   title: 'Online Marketplaces',
+  //   desc: 'Digital platforms that connect OEMs and buyers with vetted service providers across the region.',
+  // },
   {
     icon: iLogistics,
     title: 'Logistics & Fulfilment',

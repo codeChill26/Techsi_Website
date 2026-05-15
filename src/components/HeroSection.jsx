@@ -34,8 +34,8 @@ export default function HeroSection() {
                         Supply Chain
                     </h1>
                     <p className="lp-hero__desc">
-                        TECHSI PTE LTD distributes high-quality electronic components and
-                        operates online service marketplaces — connecting global
+                        TECHSI PTE LTD distributes high-quality electronic and
+                        telecommunication components — connecting global
                         manufacturers with engineering teams across the region.
                     </p>
 
