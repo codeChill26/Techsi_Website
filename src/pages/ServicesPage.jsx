@@ -3,7 +3,6 @@ import Footer from '../components/Footer.jsx'
 import { useNavigate } from 'react-router-dom'
 import {
   BriefcaseBusiness,
-  Globe,
   Headset,
   ShieldCheck,
   ShoppingBag,

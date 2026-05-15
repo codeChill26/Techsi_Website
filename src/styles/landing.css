@@ -154,7 +154,7 @@
   font-size: 40px;
   margin-bottom: 0;
   width: 320px;
-  transform: translate(-76px, -34px);
+  transform: translate(-80px, -70px);
 }
 
 .lp-hero__title {
@@ -833,6 +833,19 @@
   .lp-hero__grid,
   .lp-cta__grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Mobile/tablet background cropping (no distortion):
+     - Hero: keep subject on the left, crop the right
+     - CTA: keep subject on the right, crop the left */
+  .lp-hero--bg {
+    background-position: left center;
+    background-size: auto 50%;
+  }
+
+  .lp-cta--bg {
+    background-position: right center;;
+    background-size: auto 60%;
   }
 
   .lp-hero__title {

@@ -1,5 +1,4 @@
 import iWholesale from '../assets/sliced/Icon_3/Icon_3_r1_c3.png'
-import iMarketplace from '../assets/sliced/Icon_3/Icon_3_r2_c2.png'
 import iLogistics from '../assets/sliced/Icon_3/Icon_3_r1_c2.png'
 import iQuality from '../assets/sliced/Icon_3/Icon_3_r2_c1.png'
 import iFast from '../assets/sliced/Icon_3/Icon_3_r2_c3.png'

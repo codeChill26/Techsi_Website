@@ -1,5 +1,4 @@
-import contactBg from '../assets/Contact_background.png'
-import wave2 from '../assets/Wave_2.png'
+import contactBg from '../assets/Contact_background.png';
 
 export default function CtaSection() {
   return (
@@ -30,9 +29,9 @@ export default function CtaSection() {
         Contact TECHSI
       </a>
 
-      <div className="lp-section-wave lp-section-wave--cta" aria-hidden="true">
+      {/* <div className="lp-section-wave lp-section-wave--cta" aria-hidden="true">
         <img className="lp-section-wave__img" src={wave2} alt="" />
-      </div>
+      </div> */}
     </section>
   )
 }

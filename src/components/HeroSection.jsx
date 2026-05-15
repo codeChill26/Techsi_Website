@@ -1,5 +1,4 @@
-import heroBg from '../assets/Hero_background.png'
-import wave1 from '../assets/Wave_1.png'
+import heroBg from '../assets/Hero_background.png';
 import { useNavigate } from 'react-router-dom'
 
 export default function HeroSection() {
@@ -23,9 +22,9 @@ export default function HeroSection() {
                 </div>
 
                 <div className="lp-hero__right">
-                    <div className="lp-hero__figure" aria-hidden="true">
+                    {/* <div className="lp-hero__figure" aria-hidden="true">
                         <img className="lp-hero__figureImg" src={wave1} alt="" />
-                    </div>
+                    </div> */}
                     <h1 className="lp-hero__title">
                         Powering
                         <br />
@@ -58,9 +57,9 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <div className="lp-section-wave lp-section-wave--hero" aria-hidden="true">
+            {/* <div className="lp-section-wave lp-section-wave--hero" aria-hidden="true">
                 <img className="lp-section-wave__img" src={wave1} alt="" />
-            </div>
+            </div> */}
         </section>
     )
 }
