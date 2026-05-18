@@ -8,11 +8,10 @@ export default function WhatWeDoSection() {
           <div className="container">
             <h2 className="lp-what__title">What we do</h2>
             <p className="lp-what__sub">
-              Two complementary business lines — one mission
+              Two complementary business lines — one mission: 
               <br />
               <em>
-                make sourcing electronics and engineering services radically
-                simpler
+                to make sourcing electronics, telecommunications, and engineering services radically simpler.
               </em>
             </p>
           </div>

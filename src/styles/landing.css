@@ -27,7 +27,7 @@
   text-decoration: none;
   color: var(--c-navy);
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1.2px;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .lp-nav a[data-active='true'] {
-  font-weight: 700;
+  font-weight: 600;
   position: relative;
   color: var(--c-navy);
 }
@@ -149,7 +149,7 @@
 
 .lp-hero__kicker {
   align-self: center;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.05;
   font-size: 40px;
   margin-bottom: 0;
@@ -161,7 +161,7 @@
   font-size: 78px;
   line-height: 1.06;
   margin: 0 0 18px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.1px;
 }
 
@@ -365,7 +365,7 @@
 .lp-what__title {
   font-size: 76px;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 12px;
   color: #fff;
 }
@@ -485,7 +485,7 @@
 
 .lp-card__title {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 6px;
   color: var(--c-navy);
 }
@@ -531,14 +531,14 @@
 .lp-inventory__from {
   font-size: 76px;
   line-height: 0.98;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .lp-inventory__title {
   margin: 0 0 14px;
   font-size: 76px;
   line-height: 0.98;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .lp-inventory__desc {
@@ -647,7 +647,7 @@
   margin: 0 0 10px;
   font-size: 74px;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .lp-cta__desc {
@@ -696,7 +696,7 @@
 }
 
 .lp-footer__company {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   color: rgba(13, 47, 66, 0.9);
 }
@@ -997,7 +997,12 @@
   }
 
   .lp-footer__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+  }
+
+  .lp-footer__grid > :first-child {
+    grid-column: 1 / -1;
   }
 
   .lp-cta {

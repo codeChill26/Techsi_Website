@@ -103,7 +103,10 @@ export default function ServicesPage() {
           <div className="container">
             <div className="sv-cards__grid">
               {services.map(({ Icon, title, desc }) => (
-                <article className="sv-card" key={title}>
+                <article
+                  className={`sv-card${title === 'Technical Expertise' ? ' sv-card--staggerLeft' : ''}${title === 'Flexible & Customer-Centric' ? ' sv-card--staggerRight' : ''}`}
+                  key={title}
+                >
                   <div className="sv-card__iconWrap" aria-hidden="true">
                     <Icon className="sv-card__icon" />
                   </div>
