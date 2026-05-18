@@ -27,7 +27,7 @@
 }
 
 .ct-body {
-  background: var(--white);
+  background: var(--page-bg);
   padding: 58px 0 90px;
 }
 
@@ -57,19 +57,19 @@
 .ct-infoCard__icon {
   width: 52px;
   height: 52px;
-  border-radius: 12px;
-  background: rgba(13, 47, 66, 0.92);
+  border-radius: 0;
+  background: transparent;
   display: grid;
   place-items: center;
   flex: none;
 }
 
 .ct-infoCard__icon img {
-  width: 24px;
-  height: 24px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.95;
+  filter: none;
+  opacity: 1;
 }
 
 .ct-infoCard__label {

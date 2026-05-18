@@ -93,51 +93,65 @@
 }
 
 .pr-card {
-  background: rgba(118, 138, 151, 0.12);
-  border: 1px solid rgba(13, 47, 66, 0.1);
+  background-color: var(--page-bg);
+  background-image: linear-gradient(
+      180deg,
+      rgba(118, 138, 151, 0.24) 0%,
+      rgba(118, 138, 151, 0.14) 45%,
+      var(--page-bg) 100%
+    ),
+    url('../assets/layer2-01.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+  border: 0;
   border-radius: var(--radius);
   padding: 20px 18px;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .pr-card__iconWrap {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: rgba(13, 47, 66, 0.92);
-  margin: 0 auto 12px;
+  align-self: flex-start;
+  display: inline-flex;
+  justify-content: flex-start;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+  margin: 0 0 12px;
 }
 
 .pr-card__icon {
-  width: 22px;
-  height: 22px;
-  color: rgba(255, 255, 255, 0.95);
+  width: 38px;
+  height: 38px;
+  color: rgba(13, 47, 66, 0.9);
 }
 
 .pr-card__iconWrap {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: rgba(13, 47, 66, 0.06);
-  border: 1px solid rgba(13, 47, 66, 0.08);
+  align-self: flex-start;
+  display: inline-flex;
+  justify-content: flex-start;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: 0;
   margin-bottom: 12px;
 }
 
 .pr-card__icon {
-  width: 22px;
-  height: 22px;
-  color: var(--c-navy);
+  width: 38px;
+  height: 38px;
+  color: rgba(13, 47, 66, 0.9);
 }
 
 .pr-card__title {
   margin: 0 0 8px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  color: rgba(13, 47, 66, 0.92);
+  color: var(--black);
 }
 
 .pr-card__desc {
@@ -148,13 +162,15 @@
 }
 
 .pr-card__list {
-  margin: 0 auto;
+  margin: 0;
   padding: 0 0 0 18px;
-  display: inline-block;
+  display: block;
   text-align: left;
   font-size: 13px;
   line-height: 1.5;
-  color: rgba(13, 47, 66, 0.7);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .pr-card__list li {

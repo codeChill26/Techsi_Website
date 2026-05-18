@@ -28,7 +28,7 @@
 }
 
 .ab-intro {
-  background: var(--white);
+  background: transparent;
   padding: 62px 0;
 }
 
@@ -91,7 +91,7 @@
 
 .ab-cards {
   padding: 60px 0 70px;
-  background: rgba(118, 138, 151, 0.12);
+  background: transparent;
 }
 
 .ab-cards__grid {
@@ -101,47 +101,56 @@
 }
 
 .ab-card {
-  background: var(--white);
-  border: 1px solid rgba(13, 47, 66, 0.08);
+  background-color: var(--page-bg);
+  background-image: linear-gradient(
+      180deg,
+      rgba(118, 138, 151, 0.24) 0%,
+      rgba(118, 138, 151, 0.14) 45%,
+      var(--page-bg) 100%
+    ),
+    url('../assets/layer2-01.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+  border: 0;
   border-radius: 16px;
   padding: 26px 26px 28px;
-  box-shadow: 0 14px 36px rgba(13, 47, 66, 0.06);
+  box-shadow: none;
 }
 
 .ab-card__icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: rgba(13, 47, 66, 0.92);
+  display: inline-flex;
+  justify-content: flex-start;
+  background: transparent;
   margin-bottom: 16px;
 }
 
 .ab-card__icon img {
-  width: 22px;
-  height: 22px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.95;
+  filter: none;
+  opacity: 1;
 }
 
 .ab-card__title {
   margin: 0 0 10px;
-  font-size: 22px;
+  font-size: 36px;
   font-weight: 600;
-  color: var(--c-navy);
+  color: var(--black);
 }
 
 .ab-card__text {
   margin: 0;
   font-size: 16px;
   line-height: 1.65;
-  color: rgba(13, 47, 66, 0.7);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .ab-adv {
-  background: var(--white);
+  background: transparent;
   padding: 82px 0 110px;
 }
 
@@ -153,21 +162,21 @@
 }
 
 .ab-adv__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
+  width: 104px;
+  height: 104px;
+  border-radius: 0;
   display: grid;
   place-items: center;
-  background: rgba(13, 47, 66, 0.92);
+  background: transparent;
   flex: none;
 }
 
 .ab-adv__icon img {
-  width: 26px;
-  height: 26px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.95;
+  filter: none;
+  opacity: 1;
 }
 
 .ab-adv__title {
