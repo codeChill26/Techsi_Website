@@ -43,8 +43,11 @@ const productSections = [
   {
     Icon: Cable,
     title: 'Optical transmission solution',
-    desc:
+    desc: [
       'In an era of hyper-connectivity, we provide the infrastructure hardware and components necessary to build, expand, and maintain robust communication networks.',
+      'We are a trusted partner for high-capacity optical transport networks. We specialize in advanced DWDM (Dense Wavelength Division Multiplexing) solutions that enable telecom operators, enterprises, and data centers to expand bandwidth, improve network reliability, and optimize fiber infrastructure efficiency.',
+      'With a focus on innovation, scalability, and end-to-end service support, we deliver reliable optical networking solutions including transmission systems, network design, deployment, monitoring, and maintenance services. Our mission is to help customers build faster, smarter, and future-ready communication networks.',
+    ],
     items: [
       {
         Icon: Cable,
@@ -59,6 +62,44 @@ const productSections = [
           'Antennas',
           'Transceivers',
           'Cellular modules (5G/4G/LTE)',
+        ],
+      },
+      {
+        Icon: Layers,
+        title: 'Fiber Optics',
+        bullets: [
+          'Backbone and regional DWDM',
+          'Optical transceivers',
+          'Fiber optic cables and optical accessories',
+        ],
+      },
+    ],
+  },
+  {
+    Icon: Wifi,
+    title: 'Broadband solutions',
+    desc: [
+      'We are delivering next-generation fiber broadband solutions for telecom operators, enterprises, ISPs, and smart city infrastructures. We provide end-to-end optical access technologies including GPON, XGS-PON, FTTH, and carrier-grade transmission systems to enable ultra-fast, stable, and scalable connectivity.',
+      'Our solutions are designed to support growing bandwidth demands, enhance network performance, and accelerate digital transformation. From network planning and deployment to operation and maintenance, we help customers build reliable, future-ready broadband infrastructures with high efficiency and long-term value.',
+    ],
+    items: [
+      {
+        Icon: Layers,
+        title: 'Optical Access Technologies',
+        bullets: ['GPON', 'XGS-PON', 'FTTH'],
+      },
+      {
+        Icon: Cable,
+        title: 'Carrier-Grade Transmission',
+        bullets: ['Carrier-grade transmission systems'],
+      },
+      {
+        Icon: Activity,
+        title: 'Lifecycle Services',
+        bullets: [
+          'Network planning and design',
+          'Deployment and integration',
+          'Operation and maintenance',
         ],
       },
     ],
@@ -97,7 +138,13 @@ export default function ProductsPage() {
                   <h2 className="pr-block__title">{title}</h2>
                 </div>
 
-                <p className="pr-block__desc">{desc}</p>
+                <div className="pr-block__descGroup">
+                  {(Array.isArray(desc) ? desc : [desc]).map((p) => (
+                    <p className="pr-block__desc" key={p}>
+                      {p}
+                    </p>
+                  ))}
+                </div>
 
                 <div className="pr-categories__grid">
                   {items.map((it) => (

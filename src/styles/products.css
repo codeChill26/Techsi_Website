@@ -71,11 +71,19 @@
   color: rgba(13, 47, 66, 0.95);
 }
 
-.pr-block__desc {
+.pr-block__descGroup {
   margin: 0 0 16px;
-  max-width: 900px;
+  max-width: none;
+}
+
+.pr-block__desc {
+  margin: 0 0 10px;
   color: rgba(13, 47, 66, 0.7);
   line-height: 1.5;
+}
+
+.pr-block__desc:last-child {
+  margin-bottom: 0;
 }
 
 .pr-categories__grid {
