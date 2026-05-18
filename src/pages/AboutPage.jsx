@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className="container">
             <div className="ab-hero__kicker">ABOUT US</div>
             <h1 className="ab-hero__title">
-              A Singapore name in electronics distribution
+              Techsi is a Singapore-based enterprise specializing in electronics, telecommunications, and transmission equipment
             </h1>
             <p className="ab-hero__desc">
               TECHSI PTE LTD is a registered Singapore company operating at the
@@ -87,8 +87,8 @@ export default function AboutPage() {
                 </div>
                 <h3 className="ab-card__title">Mission</h3>
                 <p className="ab-card__text">
-                  Make electronic component sourcing transparent, fast and
-                  reliable for every engineering team in the region.
+                  Empower your business with reliable, cutting-edge components, ensuring seamless operations, 
+                  faster time-to-market, and unparalleled technical support.
                 </p>
               </article>
 

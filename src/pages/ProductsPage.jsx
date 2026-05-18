@@ -1,60 +1,67 @@
 import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 import { useNavigate } from 'react-router-dom'
-import {
-  Activity,
-  Cable,
-  Cpu,
-  Database,
-  Layers,
-  Wifi,
-  Wrench,
-  Zap,
-} from 'lucide-react'
+import { Activity, Cable, Cpu, Layers, Wifi } from 'lucide-react'
 
 import '../styles/landing.css'
 import '../styles/products.css'
 
-const categories = [
+const productSections = [
   {
     Icon: Cpu,
-    title: 'Semiconductors & ICs',
-    desc: 'Microcontrollers, MPUs, SoCs, FPGAs, analog and mixed-signal ICs.',
-  },
-  {
-    Icon: Layers,
-    title: 'Passive Components',
-    desc: 'Resistors, capacitors, inductors, crystals and oscillators.',
-  },
-  {
-    Icon: Zap,
-    title: 'Power Management',
-    desc: 'DC-DC converters, LDOs, MOSFETs, gate drivers and protection ICs.',
+    title: 'Electronic Devices & Components',
+    desc:
+      'From prototyping to mass production, we supply a vast array of active and passive components essential for consumer electronics, automotive tech, industrial automation, and IoT applications.',
+    items: [
+      {
+        Icon: Cpu,
+        title: 'Active Components',
+        bullets: [
+          'Semiconductors',
+          'Microcontrollers (MCUs)',
+          'Integrated Circuits (ICs)',
+          'Diodes',
+          'Transistors',
+        ],
+      },
+      {
+        Icon: Layers,
+        title: 'Passive Components',
+        bullets: ['Resistors', 'Capacitors', 'Inductors', 'Transformers'],
+      },
+      {
+        Icon: Activity,
+        title: 'Sensors & Modules',
+        bullets: [
+          'Power management modules',
+          'Optoelectronics',
+          'Smart sensors',
+        ],
+      },
+    ],
   },
   {
     Icon: Cable,
-    title: 'Connectors & Cables',
-    desc: 'Board-to-board, wire-to-board, RF, USB-C, FFC/FPC connectors.',
-  },
-  {
-    Icon: Wifi,
-    title: 'Wireless & RF Modules',
-    desc: 'Wi‑Fi, Bluetooth, LoRa, NB‑IoT, GNSS modules and antennas.',
-  },
-  {
-    Icon: Database,
-    title: 'Memory & Storage',
-    desc: 'DRAM, NAND/NOR flash, eMMC, EEPROM and SD storage.',
-  },
-  {
-    Icon: Activity,
-    title: 'Sensors & Discretes',
-    desc: 'MEMS sensors, diodes, transistors, optocouplers and relays.',
-  },
-  {
-    Icon: Wrench,
-    title: 'Tools & Accessories',
-    desc: 'Development kits, programmers, enclosures and prototyping supplies.',
+    title: 'Optical transmission solution',
+    desc:
+      'In an era of hyper-connectivity, we provide the infrastructure hardware and components necessary to build, expand, and maintain robust communication networks.',
+    items: [
+      {
+        Icon: Cable,
+        title: 'Networking Hardware',
+        bullets: ['Switches', 'Routers', 'Gateways', 'Access points'],
+      },
+      {
+        Icon: Wifi,
+        title: 'Wireless & RF Components',
+        bullets: [
+          'RF connectors',
+          'Antennas',
+          'Transceivers',
+          'Cellular modules (5G/4G/LTE)',
+        ],
+      },
+    ],
   },
 ]
 
@@ -81,17 +88,34 @@ export default function ProductsPage() {
 
         <section className="pr-categories" aria-label="Product categories">
           <div className="container">
-            <div className="pr-categories__grid">
-              {categories.map(({ Icon, title, desc }) => (
-                <article className="pr-card" key={title}>
-                  <div className="pr-card__iconWrap" aria-hidden="true">
-                    <Icon className="pr-card__icon" />
+            {productSections.map(({ Icon, title, desc, items }) => (
+              <div className="pr-block" key={title}>
+                <div className="pr-block__head">
+                  <div className="pr-block__iconWrap" aria-hidden="true">
+                    <Icon className="pr-block__icon" />
                   </div>
-                  <h2 className="pr-card__title">{title}</h2>
-                  <p className="pr-card__desc">{desc}</p>
-                </article>
-              ))}
-            </div>
+                  <h2 className="pr-block__title">{title}</h2>
+                </div>
+
+                <p className="pr-block__desc">{desc}</p>
+
+                <div className="pr-categories__grid">
+                  {items.map((it) => (
+                    <article className="pr-card" key={it.title}>
+                      <div className="pr-card__iconWrap" aria-hidden="true">
+                        <it.Icon className="pr-card__icon" />
+                      </div>
+                      <h3 className="pr-card__title">{it.title}</h3>
+                      <ul className="pr-card__list">
+                        {it.bullets.map((b) => (
+                          <li key={b}>{b}</li>
+                        ))}
+                      </ul>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
