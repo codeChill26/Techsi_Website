@@ -89,7 +89,7 @@
 .pr-categories__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 10px;
 }
 
 .pr-card {

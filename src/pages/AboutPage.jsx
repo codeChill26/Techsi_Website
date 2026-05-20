@@ -2,9 +2,9 @@ import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 
 import aboutImg from '../assets/About_Image.jpg'
-import missionIcon from '../assets/sliced/Icon_3/Icon_3_r1_c1.png'
-import visionIcon from '../assets/sliced/Icon_3/Icon_3_r1_c2.png'
-import valuesIcon from '../assets/sliced/Icon_3/Icon_3_r1_c3.png'
+import missionIcon from '../assets/About1.png'
+import visionIcon from '../assets/About3.png'
+import valuesIcon from '../assets/About2.png'
 import hubIcon from '../assets/sliced/Icon_3/Icon_3_r2_c1.png'
 
 import '../styles/landing.css'
